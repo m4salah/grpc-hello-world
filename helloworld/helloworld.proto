@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/m4salah/grpc-hello-world/helloworld";
+
+message HelloWorldRequest {}
+
+message HelloWorldResponse {
+    string message = 1;
+}
+
+service HelloWorld {
+    rpc HelloWorld(HelloWorldRequest) returns (HelloWorldResponse) {}
+}
